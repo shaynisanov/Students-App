@@ -7,7 +7,7 @@
     android:background="?attr/selectableItemBackground">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/studentRowIcon"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="4dp"
@@ -19,29 +19,29 @@
         app:srcCompat="@drawable/avatar" />
 
     <TextView
-        android:id="@+id/studentNameText"
+        android:id="@+id/studentRowNameText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
-        app:layout_constraintBottom_toTopOf="@+id/studentIdText"
-        app:layout_constraintEnd_toStartOf="@+id/checkBox"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintBottom_toTopOf="@+id/studentRowIdText"
+        app:layout_constraintEnd_toStartOf="@+id/studentRowCheckBox"
+        app:layout_constraintStart_toEndOf="@+id/studentRowIcon"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/studentIdText"
+        android:id="@+id/studentRowIdText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/checkBox"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/studentNameText" />
+        app:layout_constraintEnd_toStartOf="@+id/studentRowCheckBox"
+        app:layout_constraintStart_toEndOf="@+id/studentRowIcon"
+        app:layout_constraintTop_toBottomOf="@+id/studentRowNameText" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/studentRowCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="4dp"
