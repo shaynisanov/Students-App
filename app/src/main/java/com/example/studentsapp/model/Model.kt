@@ -10,9 +10,10 @@ class Model private constructor() {
     init {
         for (i in 0..20) {
             val student = Student(
-                picUrl = "",
                 name = "Yosi Cohen $i",
                 id = i.toString(),
+                phone = "0522222222",
+                address = "Tel Aviv",
                 isChecked = false
             )
             students.add(student)

@@ -20,9 +20,9 @@ class StudentViewHolder(
         private var student: Student? = null
 
         init {
-            nameTextView = itemView.findViewById(R.id.studentNameText)
-            idTextView = itemView.findViewById(R.id.studentIdText)
-            studentCheckBox = itemView.findViewById(R.id.checkBox)
+            nameTextView = itemView.findViewById(R.id.studentRowNameText)
+            idTextView = itemView.findViewById(R.id.studentRowIdText)
+            studentCheckBox = itemView.findViewById(R.id.studentRowCheckBox)
 
             studentCheckBox?.apply {
                     setOnClickListener {
