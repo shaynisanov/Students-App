@@ -34,8 +34,7 @@ class StudentViewHolder(
 
             itemView.setOnClickListener {
                 Log.d("TAG", "On click listener on position $adapterPosition")
-                listener?.onItemClick(adapterPosition)
-                listener?.onItemClick(student)
+                student?.let{listener?.onItemClick(it)}
             }
         }
 

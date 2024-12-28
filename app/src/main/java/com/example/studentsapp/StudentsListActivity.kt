@@ -17,7 +17,6 @@ import com.example.studentsapp.model.Model
 import com.example.studentsapp.model.Student
 
 interface OnItemClickListener {
-    fun onItemClick(position: Int)
     fun onItemClick(student: Student?)
 }
 
@@ -49,12 +48,10 @@ class StudentsListActivity : AppCompatActivity() {
         recyclerView.layoutManager = layoutManager
 
         (adapter as StudentsRecyclerAdapter).listener = object : OnItemClickListener {
-            override fun onItemClick(position: Int) {
-                Log.d("TAG", "On click Activity listener on position $position")
-            }
-
             override fun onItemClick(student: Student?) {
-                Log.d("TAG", "On student clicked name: ${student?.name}")
+                val intent = Intent(this@StudentsListActivity, StudentDetailsActivity::class.java)
+                intent.putExtra("studentData", student)  // Pass the student object
+                startActivity(intent)
             }
         }
         recyclerView.adapter = adapter
