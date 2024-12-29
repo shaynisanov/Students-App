@@ -3,7 +3,6 @@ package com.example.studentsapp
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -17,7 +16,7 @@ import com.example.studentsapp.model.Model
 import com.example.studentsapp.model.Student
 
 interface OnItemClickListener {
-    fun onItemClick(student: Student?)
+    fun onItemClick(position:Int, student: Student?)
 }
 
 class StudentsListActivity : AppCompatActivity() {
@@ -48,9 +47,10 @@ class StudentsListActivity : AppCompatActivity() {
         recyclerView.layoutManager = layoutManager
 
         (adapter as StudentsRecyclerAdapter).listener = object : OnItemClickListener {
-            override fun onItemClick(student: Student?) {
+            override fun onItemClick(position:Int ,student: Student?) {
                 val intent = Intent(this@StudentsListActivity, StudentDetailsActivity::class.java)
-                intent.putExtra("studentData", student)  // Pass the student object
+                intent.putExtra("studentData", student)
+                intent.putExtra("studentPos", position)
                 startActivity(intent)
             }
         }

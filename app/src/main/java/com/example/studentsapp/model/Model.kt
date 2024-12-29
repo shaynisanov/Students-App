@@ -8,7 +8,7 @@ class Model private constructor() {
     }
 
     init {
-        for (i in 0..20) {
+        for (i in 0..4) {
             val student = Student(
                 name = "Yosi Cohen $i",
                 id = i.toString(),

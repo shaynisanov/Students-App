@@ -1,6 +1,5 @@
 package com.example.studentsapp.adapter
 
-import android.util.Log
 import android.view.View
 import android.widget.CheckBox
 import android.widget.TextView
@@ -33,8 +32,7 @@ class StudentViewHolder(
                 }
 
             itemView.setOnClickListener {
-                Log.d("TAG", "On click listener on position $adapterPosition")
-                student?.let{listener?.onItemClick(it)}
+                listener?.onItemClick(adapterPosition, student)
             }
         }
 
